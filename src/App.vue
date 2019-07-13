@@ -3,6 +3,8 @@
     <div id="nav">
       <!-- Vue Router を使ってページ遷移するための router-link タグです -->
       <router-link to="/">Home</router-link> |
+      <!-- "/sandbox" へのリンクを追加 -->
+      <router-link to="/sandbox">Sandbox</router-link> |
       <router-link to="/about">About</router-link>
     </div>
 
