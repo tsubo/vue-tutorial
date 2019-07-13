@@ -1,16 +1,20 @@
 <template>
   <div id="app">
     <div id="nav">
+      <!-- Vue Router を使ってページ遷移するための router-link タグです -->
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+
+    <!-- Vue Router で遷移したページが router-view に表示されます -->
+    <router-view />
   </div>
 </template>
 
 <style>
+/* ここに、このコンポーネントに適用する CSS を書きます */
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

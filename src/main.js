@@ -6,7 +6,8 @@ import store from './store'
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+  // Vue 使います
+  router, // Vue Router 使います
+  store, // Vuex ストア使います
+  render: h => h(App), // App コンポーネント埋め込みます
+}).$mount('#app') // index.html の <div id="app"></div> に Vue を適用します

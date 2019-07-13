@@ -1,4 +1,5 @@
 <template>
+  <!-- ここにコンポーネントの HTML を記述します -->
   <div class="about">
     <h1>This is an about page</h1>
   </div>
