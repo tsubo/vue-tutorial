@@ -1,8 +1,11 @@
 <template>
-  <!-- todo プロパティのテキストを表示 -->
   <li>
     {{ todo.text }}
-    <button @click="$emit('remove', todo.id)">x</button>
+    <!-- class の指定を追加 -->
+    <button
+      class="btn btn-light btn-sm"
+      @click="$emit('remove', todo.id)"
+    >x</button>
   </li>
 </template>
 

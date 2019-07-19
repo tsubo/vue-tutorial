@@ -1,6 +1,8 @@
 <template>
+  <!-- class の指定を追加 -->
   <input
     type="text"
+    class="form-control"
     v-model="value"
     @change="onChange($event.target.value)"
     placeholder="Add Todo"
