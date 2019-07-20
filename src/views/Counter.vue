@@ -22,6 +22,30 @@ import { mapGetters } from "vuex"; // ゲッターのヘルパーをインポー
 import { mapActions } from "vuex"; // アクションのヘルパーをインポート
 
 export default {
+  beforeCreate() {
+    console.log("beforeCreate");
+  },
+  created() {
+    console.log("created");
+  },
+  beforeMount() {
+    console.log("beforeMount");
+  },
+  mounted() {
+    console.log("mounted");
+  },
+  beforeUpdate() {
+    console.log("beforeUpdate");
+  },
+  updated() {
+    console.log("updated");
+  },
+  beforeDestroy() {
+    console.log("beforeDestroy");
+  },
+  destroyed() {
+    console.log("destroyed");
+  },
   computed: {
     ...mapState([
       "count" // this.count を this.$store.state.count にマップ
