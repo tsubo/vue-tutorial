@@ -6,6 +6,7 @@
       <!-- "/sandbox" へのリンクを追加 -->
       <router-link to="/sandbox">Sandbox</router-link> |
       <router-link to="/todolist">Todo List</router-link> |
+      <router-link to="/counter">Counter</router-link> |
       <router-link to="/about">About</router-link>
     </div>
 

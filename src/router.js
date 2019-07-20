@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Sandbox from './views/SandBox.vue'
 import TodoList from './views/TodoList.vue'
+import Counter from './views/Counter.vue'
 
 Vue.use(Router)
 
@@ -27,16 +28,19 @@ export default new Router({
         import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
     {
-      // sandbox パスの追加
       path: '/sandbox',
       name: 'sandbox',
       component: Sandbox,
     },
     {
-      // sandbox パスの追加
       path: '/todolist',
       name: 'todolist',
       component: TodoList,
     },
+    {
+      path: '/counter',
+      name: 'counter',
+      component: Counter
+    }
   ],
 })

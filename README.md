@@ -1,6 +1,6 @@
 # vue-tutorial
 
-## ASAP Vue SPA 入門：なるはや Vue SPA エンジニアへの道
+## なるはや Vue SPA 入門
 
 JavaScript や jQuery は知っているが、Vue.js は初めてといった方がなるはやで Vue SPA(Single Page Application) エンジニアになるのをサポートします。
 
