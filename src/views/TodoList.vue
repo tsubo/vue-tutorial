@@ -23,47 +23,36 @@
 // TodoListItem コンポーネントを import します
 import TodoListItem from "../components/TodoListItem";
 import TodoInputText from "../components/TodoInputText";
+import { mapGetters } from "vuex";
+import { mapMutations } from "vuex";
+import { mapActions } from "vuex";
 
 export default {
-  // 使用するコンポーネントを Vue に伝えます
   components: {
     TodoListItem,
     TodoInputText
   },
-  data() {
-    return {
-      todos: []
-    };
-  },
   created() {
-    fetch("http://localhost:8080/todos.json")
-      .then(response => response.json())
-      .then(json => {
-        console.log(json);
-        this.todos = json.todos;
-      })
-      .catch(error => console.error("Error:", error));
+    this.getTodos();
+  },
+  computed: {
+    ...mapGetters({
+      todos: "todoList/todos"
+    })
   },
   methods: {
-    nextId() {
-      if (this.todos.length) {
-        return Math.max(...this.todos.map(todo => todo.id)) + 1;
-      }
-      return 1;
+    ...mapMutations({
+      remove: "todoList/remove"
+    }),
+    ...mapActions({
+      getTodos: "todoList/getTodos",
+      add: "todoList/add"
+    }),
+    removeTodo(idToRemove) {
+      this.remove(idToRemove);
     },
     addTodo(text) {
-      const trimedText = text.trim();
-      if (trimedText) {
-        this.todos.push({
-          id: this.nextId(),
-          text: trimedText
-        });
-      }
-    },
-    removeTodo(idToRemove) {
-      this.todos = this.todos.filter(todo => {
-        return todo.id !== idToRemove;
-      });
+      this.add(text);
     }
   }
 };
