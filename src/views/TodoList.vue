@@ -32,12 +32,17 @@ export default {
   },
   data() {
     return {
-      todos: [
-        { id: 1, text: "Learn Vue" },
-        { id: 2, text: "Learn about single file components" },
-        { id: 3, text: "Learn about conponents" }
-      ]
+      todos: []
     };
+  },
+  created() {
+    fetch("http://localhost:8080/todos.json")
+      .then(response => response.json())
+      .then(json => {
+        console.log(json);
+        this.todos = json.todos;
+      })
+      .catch(error => console.error("Error:", error));
   },
   methods: {
     nextId() {
